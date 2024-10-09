@@ -11,13 +11,20 @@
     --secondary-color: #EF5955;
     --offwhite: #DCD9E1;
 
+    --small-space: 10px;
     --small-space-hz: 0px 10px;
     --small-space-vt: 10px 0px;
 
-    --heading-font: "emilys candy", serif;
+    --heading-font: "gloock", serif;
     --body-font: "montserrat", sans-serif;
 
+    --h1-size: 2em;
+    --h2-size: 1.5em;
+    --nav-size: 1.25em;
+
     --transition-time: 0.5s;
+
+    --element-outline: 2px solid var(--light-bg);
 }
 
 
@@ -45,6 +52,10 @@ header i {
     justify-self: flex-start;
 }
 
+#logo-link:hover {
+    scale: 1.2;
+}
+
 ul {
     margin: 0;
     padding: 0;
@@ -53,15 +64,48 @@ ul {
 ul li {
     display: inline;
     text-align: center;
+    position: relative;
     padding: var(--small-space-hz);
 }
 
-li a {
+.navlink {
+    color: var(--offwhite);
     text-decoration: none;
-    color: white;
-    transition: 0.5s;
+    padding: 10px;
+    font-family: var(--heading-font);
+    font-size: var(--nav-size);
+    transition: var(--transition-time);
 }
 
-li a:hover {
+.navlink:hover {
     color: var(--primary-color);
+}
+
+.navlink::after {
+    content: '';
+    position: absolute;
+    width: 80%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -4;
+    left: 7;
+    background-color: var(--primary-color);
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
+}
+
+.navlink:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+#hero-image {
+    object-fit: cover;
+    object-position: 10% 80%;
+    width: 100%;
+}
+
+.product-tile {
+    border: var(--element-outline);
+    padding: var(--small-space);
 }

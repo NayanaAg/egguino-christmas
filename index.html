@@ -22,7 +22,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Emilys+Candy&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Gloock&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
     <!--custom stylesheet-->
@@ -34,11 +34,11 @@
     <div id="container">
         <div class="row" id="global-nav">
             <header class="col-12 g-0">
-                <img id="logo" src="img/egguino logo.avif" alt="egguino logo">
+                <a href="index.html" id="logo-link"><img id="logo" src="img/egguino logo.avif" alt="egguino logo"></a>
                 <nav>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="pages/about.html">About</a></li>
+                        <li><a class="navlink" href="index.html">Home</a></li>
+                        <li><a class="navlink" href="pages/about.html">About</a></li>
                     </ul>
                 </nav>
                 <div>
@@ -47,7 +47,53 @@
                 </div>
             </header>
         </div>
-    </div>
+
+        <main>
+            <div class="row">
+                <section class="col-12">
+                    <img id="hero-image" src="img/head-banner.jpg" alt="penguin standing in the snow">
+                    <h1>Merry Christmas from Egguino!</h1>
+                    <p>Thanks for stopping by! We've revamped our store in true festive spirit to offer you the best
+                        gifts and stocking stuffers for your friends and family.</p>
+                </section>
+            </div>
+
+            <section>
+                <div class="row">
+                    <div class="col-md-10 offset-md-1 d-flex flex-column align-items-center">
+                        <h2>Featured Products</h1>
+                        <p>Great gifts for friends and family of all ages</p>
+                    </div>
+                </div>
+
+                <div class="row row-cols-3 row-cols-lg-4 g-2 g-lg-3">
+                    <div class="col">
+                        <div class="product-tile p-3">
+                            <img src="img/bigguino/bigguino 1.webp">
+                            <h3>Bigguino Plushie</h3>
+                            <p class="pricetag">$60.00</p>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="product-tile p-3">
+                            <img src="img/bigguino/bigguino 1.webp">
+                            <h3>Bigguino Plushie</h3>
+                            <p class="pricetag">$60.00</p>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="product-tile p-3">
+                            <img src="img/bigguino/bigguino 1.webp">
+                            <h3>Bigguino Plushie</h3>
+                            <p class="pricetag">$60.00</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
 </body>
 
 </html>
