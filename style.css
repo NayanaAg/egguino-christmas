@@ -11,7 +11,9 @@
     --secondary-color: #EF5955;
     --offwhite: #DCD9E1;
 
-    --small-space: 10px;
+    --sm-space: 10px;
+    --md-space: 35px;
+    --lg-space: 50px;
     --small-space-hz: 0px 10px;
     --small-space-vt: 10px 0px;
 
@@ -23,8 +25,15 @@
     --nav-size: 1.25em;
 
     --transition-time: 0.5s;
+    --drop-shadow: 5px 10px 7px #888888;
+}
 
-    --element-outline: 2px solid var(--light-bg);
+h1, h2, h3, h4 {
+    font-family: var(--heading-font);
+}
+
+p, a {
+    font-family: var(--body-font);
 }
 
 
@@ -48,12 +57,22 @@ header i {
 }
 
 #logo {
-    width: 50px;
-    justify-self: flex-start;
+    display: block;
+    background-image: url("img/egguino-logo.avif");
+    background-size: var(--lg-space);
+    width: var(--lg-space);
+    height: var(--lg-space);
+    object-fit: cover;
+    transition: var(--transition-time) ease;
 }
 
-#logo-link:hover {
-    scale: 1.2;
+#logo:hover {
+    background-image: url("img/logo-hover.png");
+    background-size: var(--lg-space);
+    width: var(--lg-space);
+    height: var(--lg-space);
+    object-fit: cover;
+    scale: 1.5;
 }
 
 ul {
@@ -71,7 +90,7 @@ ul li {
 .navlink {
     color: var(--offwhite);
     text-decoration: none;
-    padding: 10px;
+    padding: var(--sm-space);
     font-family: var(--heading-font);
     font-size: var(--nav-size);
     transition: var(--transition-time);
@@ -100,12 +119,35 @@ ul li {
 }
 
 #hero-image {
-    object-fit: cover;
-    object-position: 10% 80%;
-    width: 100%;
+    height: 35%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
+#featured-items {
+    background-color: var(--primary-color);
+    padding: var(--lg-space);
+}
+
+
 .product-tile {
-    border: var(--element-outline);
-    padding: var(--small-space);
+    max-width: 21vw;
+    margin: 0 auto;
+    background-color: white;
+    transition: var(--transition-time) ease;
+}
+
+.product-tile:hover {
+    box-shadow: var(--drop-shadow);
+}
+
+.product-img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.product-content {
+    padding: var(--sm-space);
 }
