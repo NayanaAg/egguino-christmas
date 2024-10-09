@@ -119,11 +119,9 @@ ul li {
 }
 
 #hero-image {
-    height: 35%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+    object-fit: cover;
+    object-position: 10% 80%;
+    width: 100%;
 }
 
 #featured-items {
@@ -131,12 +129,12 @@ ul li {
     padding: var(--lg-space);
 }
 
-
 .product-tile {
     max-width: 21vw;
     margin: 0 auto;
     background-color: white;
     transition: var(--transition-time) ease;
+    border-radius: 10px;
 }
 
 .product-tile:hover {
@@ -146,6 +144,7 @@ ul li {
 .product-img {
     width: 100%;
     object-fit: cover;
+    border-radius: 10px 10px 0 0;
 }
 
 .product-content {
