@@ -124,10 +124,17 @@ ul li {
     width: 100%;
 }
 
-#featured-items {
+/*individual section styling*/
+#feature-carousel {
+    padding: var(--lg-space);
+}
+
+#stocking-stuffers {
     background-color: var(--primary-color);
     padding: var(--lg-space);
 }
+
+/*product tiles to use across whole site*/
 
 .product-tile {
     max-width: 21vw;
@@ -150,3 +157,40 @@ ul li {
 .product-content {
     padding: var(--sm-space);
 }
+
+/*carousel slider*/
+
+.carousel-indicators {
+    justify-content: left;
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: var(--dark-bg);
+}
+
+.carousel-item {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.carousel-img {
+    float: left;
+    padding-right: var(--md-space);
+    height: 500px;
+    object-fit: cover;
+}
+
+.carousel-text {
+    max-width: 50%;
+    text-align: left;
+}
+
+.carousel-text h3 {
+    padding-top: var(--md-space);
+}
+
+.carousel-text p {
+    padding-right: var(--lg-space);
+}
+
+
