@@ -36,6 +36,7 @@ p, a {
     font-family: var(--body-font);
 }
 
+/*header and global navigation*/
 
 #global-nav {
     background-color: var(--dark-bg);
@@ -118,6 +119,9 @@ ul li {
     transform-origin: bottom left;
 }
 
+/*header and global nav end*/
+
+
 #hero-image {
     object-fit: cover;
     object-position: 10% 80%;
@@ -157,6 +161,8 @@ ul li {
 .product-content {
     padding: var(--sm-space);
 }
+
+/*product tile end*/
 
 /*carousel slider*/
 
