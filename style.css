@@ -28,6 +28,10 @@
     --drop-shadow: 5px 10px 7px #888888;
 }
 
+section {
+    margin: var(--md-space);
+}
+
 h1, h2, h3, h4 {
     font-family: var(--heading-font);
 }
@@ -199,4 +203,9 @@ ul li {
     padding-right: var(--lg-space);
 }
 
+/*individual product page styling*/
+
+table {
+    margin: var(--md-space) 0;
+}
 

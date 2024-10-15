@@ -31,6 +31,8 @@
 </head>
 
 <body>
+
+    <!--
     <div class="container">
         <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-5">
             <div class="col">
@@ -71,8 +73,8 @@
             <div class="col-md-10 offset-md-1">
                 <div id="c-indicators" class="carousel slide">
                     <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#c-indicators" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#c-indicators" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#c-indicators" data-bs-slide-to="1"
                             aria-label="Slide 2"></button>
                         <button type="button" data-bs-target="#c-indicators" data-bs-slide-to="2"
@@ -123,6 +125,67 @@
                     </button>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-10 offset-md-1">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Product</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Plushie: Eggu the Original</td>
+                        <td>1</td>
+                        <td>$34.49/ea</td>
+                        <td>0.00</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    -->
+
+    <div class="row">
+        <div class="col-md-3 offset-md-2">
+            <form>
+                <h2>Contact Information</h2>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="email">
+                    <div id="email" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+
+                <h2>Shipping Details</h2>
+                <div class="mb-3">
+                    <label for="ad-country" class="form-label">Country / Region</label>
+                    <input type="text" class="form-control" id="ad-country">
+                </div>
+
+                <div class="mb-3">
+                    <label for="ad-fname" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="ad-fname">
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
         </div>
     </div>
 </body>
