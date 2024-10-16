@@ -11,9 +11,9 @@
     --secondary-color: #EF5955;
     --offwhite: #DCD9E1;
 
-    --sm-space: 10px;
-    --md-space: 35px;
-    --lg-space: 50px;
+    --sm-space: 2%;
+    --md-space: 5%;
+    --lg-space: 10%;
     --small-space-hz: 0px 10px;
     --small-space-vt: 10px 0px;
 
@@ -211,10 +211,38 @@ table {
 
 
 /*checkout form*/
+#checkout-page {
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
 
-.form-grid {
+#form-bg {
+    background-color: white;
+    padding-right: 10%;
+}
+
+#aside-bg {
+    background-color: var(--offwhite);
+    padding: 0 var(--lg-space);
+}
+
+form {
+    margin-right: var(--lg-space);
+}
+
+#checkout-page h2 {
+    margin-top: var(--lg-space);
+}
+
+.form-grid-2 {
     display: grid;
     grid-template-columns: auto auto;
+    column-gap: var(--sm-space);
+}
+
+.form-grid-3 {
+    display: grid;
+    grid-template-columns: auto auto auto;
     column-gap: var(--sm-space);
 }
 
