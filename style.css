@@ -28,7 +28,7 @@
     --drop-shadow: 5px 10px 7px #888888;
 }
 
-section {
+.section-space {
     margin: var(--md-space);
 }
 
@@ -209,3 +209,15 @@ table {
     margin: var(--md-space) 0;
 }
 
+
+/*checkout form*/
+
+.form-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: var(--sm-space);
+}
+
+.form-inline {
+    display: inline-block;
+}
