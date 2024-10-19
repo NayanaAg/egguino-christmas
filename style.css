@@ -11,6 +11,8 @@
     --secondary-color: #EF5955;
     --offwhite: #DCD9E1;
 
+    --primary-hover: #437958;
+
     --sm-space: 10px;
     --md-space: 30px;
     --lg-space: 60px;
@@ -44,6 +46,20 @@ h4 {
 p,
 a {
     font-family: var(--body-font);
+}
+
+.btn-primary {
+    font-weight: 500;
+    padding: var(--sm-space) var(--md-space);
+    background-color: var(--primary-color);
+    border: none;
+    color: black;
+    transition: var(--transition-time);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    color: white;
 }
 
 /*header and global navigation*/
@@ -181,6 +197,7 @@ ul li {
 
 .product-tile:hover {
     box-shadow: var(--drop-shadow);
+    cursor: pointer;
 }
 
 .product-img {
@@ -204,12 +221,16 @@ ul li {
     justify-content: left;
 }
 
+.carousel-control-next, .carousel-control-prev {
+    filter: invert(100%);
+}
+
 .carousel-indicators [data-bs-target] {
     background-color: var(--dark-bg);
 }
 
 .carousel-item {
-    background-color: var(--light-bg);
+    background-color: var(--offwhite);
 }
 
 .carousel-img {
