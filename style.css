@@ -6,14 +6,16 @@
 
 :root {
     --dark-bg: #141E33;
-    --light-bg: #326191;
+    --light-bg: #7aade1;
     --primary-color: #7EC099;
     --secondary-color: #EF5955;
     --offwhite: #DCD9E1;
 
-    --sm-space: 2%;
-    --md-space: 5%;
-    --lg-space: 10%;
+    --sm-space: 10px;
+    --md-space: 30px;
+    --lg-space: 60px;
+    --xl-space: 100px;
+
     --small-space-hz: 0px 10px;
     --small-space-vt: 10px 0px;
 
@@ -32,11 +34,15 @@
     margin: var(--md-space);
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: var(--heading-font);
 }
 
-p, a {
+p,
+a {
     font-family: var(--body-font);
 }
 
@@ -124,28 +130,49 @@ ul li {
 }
 
 /*header and global nav end*/
-
+#hero-banner {
+    background-color: var(--offwhite);
+}
 
 #hero-image {
-    object-fit: cover;
-    object-position: 10% 80%;
-    width: 100%;
+    background-image: url("/img/head-banner.jpg");
+    background-position: right;
+    background-size: cover;
+    height: 30vw;
+    position: relative;
+    opacity: 0.5;
+}
+
+#hero-text {
+    text-align: left;
+    position: absolute;
+    max-width: 50%;
+    top: 40%;
+    left: 0;
+    color: black;
+    padding-left: var(--lg-space);
+}
+
+#hero-text h1 {
+    color: var(--secondary-color);
+}
+
+#hero-text p {
+    font-weight: 500;
 }
 
 /*individual section styling*/
-#feature-carousel {
+.page-tile-container {
     padding: var(--lg-space);
 }
 
 #stocking-stuffers {
     background-color: var(--primary-color);
-    padding: var(--lg-space);
 }
 
 /*product tiles to use across whole site*/
 
 .product-tile {
-    max-width: 21vw;
     margin: 0 auto;
     background-color: white;
     transition: var(--transition-time) ease;
@@ -169,6 +196,9 @@ ul li {
 /*product tile end*/
 
 /*carousel slider*/
+#carousel-container {
+    padding: var(--lg-space);
+}
 
 .carousel-indicators {
     justify-content: left;
@@ -179,8 +209,7 @@ ul li {
 }
 
 .carousel-item {
-    background-color: var(--secondary-color);
-    color: white;
+    background-color: var(--light-bg);
 }
 
 .carousel-img {
@@ -203,6 +232,28 @@ ul li {
     padding-right: var(--lg-space);
 }
 
+@media screen and (max-width: 600px) {
+    #carousel-container {
+        padding: 0;
+    }
+
+    .carousel-inner {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .carousel-img {
+        height: 300px;
+        width: 100%;
+        padding: 0;
+        float: none;
+    }
+
+    .carousel-text {
+        width: 100%;
+    }
+}
+
 /*individual product page styling*/
 
 table {
@@ -223,7 +274,7 @@ table {
 
 #aside-bg {
     background-color: var(--offwhite);
-    padding: 0 var(--lg-space);
+    padding: 0 var(--xl-space);
 }
 
 form {
