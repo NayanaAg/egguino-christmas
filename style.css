@@ -60,6 +60,8 @@ p, a, li, strong {
 }
 
 .btn-primary {
+    display: block;
+    width: fit-content;
     font-weight: 500;
     padding: var(--sm-space) var(--md-space);
     background-color: var(--primary-color);
@@ -301,7 +303,7 @@ nav ul li {
 /*individual product page styling*/
 #product-page-details img {
     border-radius: 3%;
-    width: 100%;
+    width: 90%;
 }
 
 #product-page-details h3 {
@@ -309,7 +311,7 @@ nav ul li {
 }
 
 #product-page-details a {
-    margin-top: var(--md-space);
+    margin: var(--md-space) 0;
 }
 
 table {
