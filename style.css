@@ -20,6 +20,7 @@
     --md-space: 30px;
     --lg-space: 60px;
     --xl-space: 100px;
+    --xxl-space: 150px;
 
     --small-space-hz: 0px 10px;
     --small-space-vt: 10px 0px;
@@ -29,12 +30,20 @@
 
     --h1-size: 2.5em;
     --h2-size: 2em;
-    --h3-size: 1.2em;
-    --nav-size: 1.25em;
+    --h3-size: 1.5em;
     --body-size: 1.1em;
 
     --transition-time: 0.5s;
     --drop-shadow: 5px 10px 7px #888888;
+}
+
+@media screen and (max-width: 500px) {
+    :root {
+        --h1-size: 1.75em;
+        --h2-size: 1.5em;
+        --h3-size: 1.25em;
+        --body-size: 0.9em;
+    }
 }
 
 .section-space {
@@ -122,53 +131,14 @@ header i {
     scale: 1.5;
 }
 
-nav ul {
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    text-align: center;
-    position: relative;
-    padding: var(--small-space-hz);
-}
-
-.navlink {
-    color: var(--offwhite);
-    text-decoration: none;
-    padding: var(--sm-space);
-    font-family: var(--heading-font);
-    font-size: var(--nav-size);
-    transition: var(--transition-time);
-}
-
-.navlink:hover {
-    color: var(--primary-color);
-}
-
-.navlink::after {
-    content: '';
-    position: absolute;
-    width: 80%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: -4;
-    left: 7;
-    background-color: var(--primary-color);
-    transform-origin: bottom right;
-    transition: transform 0.5s ease-out;
-}
-
-.navlink:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-
 /*header and global nav end*/
+#hero-banner-bg {
+    background-color: var(--dark-bg);
+}
+
 #hero-banner {
     display: flex;
-    background-image: url("/img/head-banner.jpg");
+    background-image: linear-gradient(to right, rgba(20,30,51,0.9), rgba(20,30,51,0.3)), url("/img/head-banner.jpg");
     height: 30vw;
     background-size: cover;
     background-position: right;
@@ -176,9 +146,11 @@ nav ul li {
 
 #hero-text {
     text-align: left;
-    color: black;
+    color: white;
     padding-left: var(--lg-space);
     max-width: 50%;
+    justify-self: center;
+    align-self: center;
 }
 
 #hero-text h1 {
@@ -189,13 +161,22 @@ nav ul li {
     font-weight: 500;
 }
 
-@media screen and (min-width: 600px) and (max-width: 1200px) {
+@media screen and (max-width: 900px) {
     #hero-banner {
-        background-color: var(--dark-bg);
+        background-image: linear-gradient(to top, rgba(20,30,51,1), rgba(20,30,51,0.3)), url("/img/head-banner.jpg");
+        height: 50vw;
     }
-    
+
     #hero-text {
-        max-width: 100%;
+        min-width: 100%;
+        text-align: center;
+        padding: var(--md-space);
+        justify-self: center;
+        align-self: flex-end;
+    }
+
+    #hero-text a {
+        margin: 0 auto;
     }
 }
 
@@ -284,7 +265,7 @@ nav ul li {
 }
 
 .carousel-text p {
-    padding: var(--md-space) var(--xl-space);
+    padding: var(--md-space) var(--xxl-space);
 }
 
 .carousel-text a {
@@ -292,9 +273,15 @@ nav ul li {
     margin-top: var(--lg-space);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
     #carousel-container {
         padding: 0;
+        margin: 0;
+    }
+
+    .carousel-indicators {
+        justify-content: center;
+        margin-bottom: 0;
     }
 
     .carousel-inner {
@@ -311,6 +298,21 @@ nav ul li {
 
     .carousel-text {
         width: 100%;
+        padding: var(--sm-space);
+    }
+
+    .carousel-text h3 {
+        padding: var(--sm-space);
+    }
+
+    .carousel-text p {
+        padding: var(--sm-space);
+    }
+
+    .carousel-text a {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
     }
 }
 /*carousel end*/
