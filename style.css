@@ -24,11 +24,11 @@
     --heading-font: "gloock", serif;
     --body-font: "montserrat", sans-serif;
 
-    --h1-size: 2em;
-    --h2-size: 1.5em;
-    --h3-size: 1.2em;
+    --h1-size: 2.5em;
+    --h2-size: 2em;
+    --h3-size: 1.5em;
     --nav-size: 1.25em;
-    --body-size: 1em;
+    --body-size: 1.1em;
 
     --transition-time: 0.5s;
     --drop-shadow: 5px 10px 7px #888888;
@@ -73,6 +73,10 @@ p, a, li, strong {
 .btn-primary:hover {
     background-color: var(--primary-hover);
     color: white;
+}
+
+.center {
+    text-align: center;
 }
 
 /*header and global navigation*/
@@ -160,26 +164,18 @@ nav ul li {
 
 /*header and global nav end*/
 #hero-banner {
-    background-color: var(--offwhite);
-}
-
-#hero-image {
+    display: flex;
     background-image: url("/img/head-banner.jpg");
-    background-position: right;
-    background-size: cover;
     height: 30vw;
-    position: relative;
-    opacity: 0.5;
+    background-size: cover;
+    background-position: right;
 }
 
 #hero-text {
     text-align: left;
-    position: absolute;
-    max-width: 50%;
-    top: 40%;
-    left: 0;
     color: black;
     padding-left: var(--lg-space);
+    max-width: 50%;
 }
 
 #hero-text h1 {
@@ -188,6 +184,16 @@ nav ul li {
 
 #hero-text p {
     font-weight: 500;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+    #hero-banner {
+        background-color: var(--dark-bg);
+    }
+    
+    #hero-text {
+        max-width: 100%;
+    }
 }
 
 /*individual section styling*/
@@ -260,12 +266,14 @@ nav ul li {
     float: left;
     padding-right: var(--md-space);
     height: 500px;
+    width: 600px;
     object-fit: cover;
 }
 
 .carousel-text {
     max-width: 50%;
     text-align: left;
+    padding: var(--xl-space);
 }
 
 .carousel-text h3 {
@@ -273,7 +281,12 @@ nav ul li {
 }
 
 .carousel-text p {
-    padding-right: var(--lg-space);
+    padding: var(--md-space) var(--xl-space);
+}
+
+.carousel-text a {
+    display: inline;
+    margin-top: var(--lg-space);
 }
 
 @media screen and (max-width: 600px) {
