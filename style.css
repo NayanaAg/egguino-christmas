@@ -131,16 +131,14 @@ a > i:hover {
 #logo {
     display: block;
     background-image: url("img/egguino-logo.avif");
-    background-size: var(--lg-space);
+    background-size: cover;
     width: var(--lg-space);
     height: var(--lg-space);
-    object-fit: cover;
     transition: var(--transition-time) ease;
 }
 
 #logo:hover {
     background-image: url("img/logo-hover.png");
-    background-size: var(--lg-space);
     width: var(--lg-space);
     height: var(--lg-space);
     object-fit: cover;
@@ -188,13 +186,20 @@ a > i:hover {
         text-align: center;
         padding: var(--md-space);
         justify-self: center;
-        align-self: flex-end;
+        align-self: center;
     }
 
     #hero-text a {
         margin: 0 auto;
     }
 }
+
+@media screen and (min-width: 550px) and (max-width: 900px) {
+    #hero-banner {
+        height: 50vw;
+    }
+}
+
 
 /*individual section styling*/
 .page-tile-container {
@@ -298,13 +303,36 @@ a > i:hover {
     margin-top: var(--lg-space);
 }
 
-@media screen and (max-width: 900px) {
-    .carousel-inner {
-        flex-direction: row;
+@media screen and (min-width: 450px) and (max-width: 1200px) {
+    .carousel-img {
+        height: 60vw;
+        width: 100%;
+        padding: 0;
+        object-fit: cover;
+    }
+
+    .carousel-text h3 {
+        text-align: center;
+    }
+
+    .carousel-text p {
+        padding: var(--md-space);
+        margin: 0;
+    }
+
+    .carousel-text a {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: var(--md-space);
+    }
+
+    .carousel-indicators {
+        justify-content: center;
+        margin-top: var(--md-space);
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 450px) {
     #carousel-container {
         padding: 0;
         margin-top: var(--lg-space);
@@ -344,6 +372,7 @@ a > i:hover {
         display: block;
         text-align: center;
         margin: 0 auto;
+        margin-bottom: var(--md-space);
     }
 }
 
