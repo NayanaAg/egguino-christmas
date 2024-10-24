@@ -30,7 +30,8 @@
     --h1-size: 2.5em;
     --h2-size: 2em;
     --h3-size: 1.3em;
-    --body-size: 1.1em;
+    --h4-size: 1em;
+    --body-size: 1em;
 
     --transition-time: 0.5s;
     --drop-shadow: 5px 10px 7px #888888;
@@ -47,6 +48,7 @@
         --h1-size: 1.75em;
         --h2-size: 1.5em;
         --h3-size: 1.25em;
+        --h4-size: 1em;
         --body-size: 0.9em;
     }
 }
@@ -111,10 +113,19 @@ header {
     flex-direction: row;
 }
 
-header i {
+i {
     color: white;
     justify-self: flex-end;
     padding: var(--small-space-hz);
+    transition: var(--transition-time);
+}
+
+footer i {
+    font-size: 1.5em;
+}
+
+a > i:hover {
+    color: var(--primary-color);
 }
 
 #logo {
@@ -287,6 +298,12 @@ header i {
     margin-top: var(--lg-space);
 }
 
+@media screen and (max-width: 900px) {
+    .carousel-inner {
+        flex-direction: row;
+    }
+}
+
 @media screen and (max-width: 500px) {
     #carousel-container {
         padding: 0;
@@ -329,6 +346,7 @@ header i {
         margin: 0 auto;
     }
 }
+
 /*carousel end*/
 
 
@@ -367,14 +385,26 @@ table {
 
 
 /*checkout form*/
+#checkout-heading {
+    padding: var(--md-space);
+    border-bottom: 2px solid var(--offwhite);
+    margin-bottom: 0;
+    text-align: center;
+}
+
 #checkout-page {
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 55% 45%;
 }
 
 #form-bg {
     background-color: white;
-    padding-right: 10%;
+    padding-right: var(--xxl-space);
+}
+
+form label, .form-text {
+    font-size: var(--body-font);
+    font-family: var(--body-font);
 }
 
 #aside-bg {
@@ -382,8 +412,10 @@ table {
     padding: 0 var(--xl-space);
 }
 
-form {
-    margin-right: var(--lg-space);
+#aside-bg h4 {
+    font-family: var(--body-font);
+    text-align: center;
+    font-weight: 800;
 }
 
 #checkout-page h2 {
@@ -404,4 +436,46 @@ form {
 
 .form-inline {
     display: inline-block;
+}
+
+@media screen and (max-width: 900px) {
+    #checkout-page {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #form-bg {
+        padding: var(--sm-space);
+    }
+
+    #aside-bg {
+        padding: var(--lg-space);
+    }
+
+    form label, .form-text {
+        font-size: 0.8em;
+    }
+}
+
+/*checkout end*/
+
+/*footer info*/
+footer {
+    background-color: var(--dark-bg);
+    color: white;
+    padding: var(--md-space);
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 800;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
