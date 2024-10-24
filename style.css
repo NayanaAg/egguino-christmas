@@ -177,7 +177,7 @@ a > i:hover {
 
 @media screen and (max-width: 900px) {
     #hero-banner {
-        background-image: linear-gradient(to top, rgba(20,30,51,1), rgba(20,30,51,0.8)), url("/img/head-banner.jpg");
+        background-image: linear-gradient(to top, rgba(20,30,51,1), rgba(20,30,51,0.8)), url("img/head-banner.jpg");
         height: 80vw;
     }
 
