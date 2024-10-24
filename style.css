@@ -152,7 +152,7 @@ a > i:hover {
 
 #hero-banner {
     display: flex;
-    background-image: linear-gradient(to right, rgba(20,30,51,0.9), rgba(20,30,51,0.3)), url("/img/head-banner.jpg");
+    background-image: linear-gradient(to right, rgba(20,30,51,0.9), rgba(20,30,51,0.3)), url("img/head-banner.jpg");
     height: 30vw;
     background-size: cover;
     background-position: right;
