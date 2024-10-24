@@ -467,6 +467,12 @@ form label, .form-text {
     display: inline-block;
 }
 
+ form .btn-primary {
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: var(--lg-space);
+ }
+
 @media screen and (max-width: 900px) {
     #checkout-page {
         display: flex;
@@ -479,6 +485,10 @@ form label, .form-text {
 
     #aside-bg {
         padding: var(--lg-space);
+    }
+
+    form {
+        padding: var(--md-space);
     }
 
     form label, .form-text {
